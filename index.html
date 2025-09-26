@@ -3,115 +3,178 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyojin Jin – Portfolio</title>
-  <meta name="description" content="Image Processing & Web Dev Portfolio of Hyojin Jin">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <title>Hyojin Jin · Portfolio</title>
+  <link rel="stylesheet" href="styles-profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Top Navbar -->
-  <header class="navbar">
-    <a class="brand" href="#">Hyojin Jin</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#">Hyojin-Jin-Lee05</a>
+      <nav>
+        <a href="#repos">Repositories</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Software · Image Processing · Frontend</h1>
-    <p>FFT/DCT · NLM/PNLM · React · Spring Boot</p>
-    <a class="btn" href="#projects">See Projects</a>
-  </section>
-
-  <main class="container">
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="projects">
-        <!-- Card 1 -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3>PNLM Denoising (2024–)</h3>
-            <span class="tag">C++ · OpenCV</span>
-          </div>
-          <p class="desc">
-            고주파 비율(FFT/DCT)로 패치/서치 크기를 적응시켜 NLM 성능 향상. PSNR/MSE 로그, 패치맵 시각화 포함.
-          </p>
-          <ul class="links">
-            <li><a href="https://github.com/..." target="_blank" rel="noopener">Code</a></li>
-            <li><a href="assets/pnlm-result.png" target="_blank" rel="noopener">Result</a></li>
-            <li><a href="projects/pnlm.html">Details</a></li>
-          </ul>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3>Y-nnect Web</h3>
-            <span class="tag">React · TS · Tailwind</span>
-          </div>
-          <p class="desc">
-            인증 흐름, 프로필 편집, 이미지 크롭/아바타, 로컬/IndexedDB 저장. 팀 협업을 위한 FSD 구조 적용.
-          </p>
-          <ul class="links">
-            <li><a href="https://github.com/..." target="_blank" rel="noopener">Repo</a></li>
-            <li><a href="https://..." target="_blank" rel="noopener">Live</a></li>
-          </ul>
-        </article>
-
-        <!-- Card 3 (예시) -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3>Down/Up-Scaling Study</h3>
-            <span class="tag">Python · OpenCV</span>
-          </div>
-          <p class="desc">
-            Bilinear/Bicubic/Lanczos/sinc 비교 실험. 커널별 특성 정리와 PSNR 비교 그래프 자동 생성.
-          </p>
-          <ul class="links">
-            <li><a href="https://github.com/..." target="_blank" rel="noopener">Notebook</a></li>
-            <li><a href="assets/psnr-chart.png" target="_blank" rel="noopener">Chart</a></li>
-          </ul>
-        </article>
+  <main class="container layout">
+    <!-- Left column: Profile -->
+    <aside class="left">
+      <div class="card profile">
+        <img class="avatar" src="assets/headshot.jpg" alt="profile" />
+        <h1>Hyojin Jin</h1>
+        <p class="username">@Hyojin-Jin-Lee05</p>
+        <p class="role">Java(Spring Boot) & Frontend · Image Processing</p>
+        <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <ul class="meta">
+          <li>🇰🇷 South Korea</li>
+          <li><a href="mailto:your@mail.com">your@mail.com</a></li>
+          <li><a href="https://github.com/Hyojin-Jin-Lee05" target="_blank">github.com/Hyojin-Jin-Lee05</a></li>
+        </ul>
       </div>
-    </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="about">
-        <img class="avatar" src="assets/headshot.jpg" alt="Hyojin Jin profile photo" />
-        <div>
-          <p>
-            연세대 미래캠 소프트웨어학부 4학년. 이미지 처리(특히 NLM/다운스케일링)와
-            웹 프론트엔드에 관심. 연구/동아리/해커톤 프로젝트를 통해 성과 중심 개발을 지향합니다.
-          </p>
-          <ul class="facts">
-            <li>관심 분야: NLM, Edge-aware Scaling, React/Tailwind, Spring Boot</li>
-            <li>핵심 역량: 실험 자동화, 로그/시각화, 협업 브랜치 전략</li>
-            <li><a href="Resume.pdf" target="_blank" rel="noopener">이력서(Resume.pdf)</a></li>
-          </ul>
+      <div class="card">
+        <h3>Achievements</h3>
+        <div class="badges">
+          <span class="badge">AI+X Hackathon Winner</span>
+          <span class="badge">Someday Lead</span>
         </div>
       </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact">
-        <a href="mailto:your@mail.com">your@mail.com</a>
-        <a href="https://github.com/Hyojin-Jin-Lee05" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="card">
+        <h3>Organizations</h3>
+        <div class="orgs">
+          <span class="org">Someday</span>
+          <span class="org">Y-CERT</span>
+        </div>
       </div>
+    </aside>
+
+    <!-- Right column: Pinned repos & activity -->
+    <section class="right">
+      <section id="repos">
+        <div class="section-head">
+          <h2>Popular repositories</h2>
+          <a class="link" href="https://github.com/Hyojin-Jin-Lee05?tab=repositories" target="_blank">Customize your pins</a>
+        </div>
+
+        <div class="grid repos">
+          <!-- Repo card -->
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">PNLM-Denoising</a>
+            <p class="desc">FFT/DCT 기반 패치/서치 적응형 NLM. PSNR/MSE 로그와 패치맵.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot cplusplus"></span>C++</span>
+              <span>★ 3</span>
+              <span>Updated 2025</span>
+            </div>
+          </article>
+
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">Y-nnect-web</a>
+            <p class="desc">React + TS + Tailwind. Auth, 프로필, 이미지 크롭.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot ts"></span>TypeScript</span>
+              <span>★ 5</span>
+              <span>Live</span>
+            </div>
+          </article>
+
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">downscaling-study</a>
+            <p class="desc">Bilinear/Bicubic/Lanczos/sinc 비교와 그래프 자동화.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot py"></span>Python</span>
+              <span>★ 2</span>
+              <span>Notebook</span>
+            </div>
+          </article>
+
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">spring-api-starter</a>
+            <p class="desc">Spring Boot 멀티모듈 + MySQL 베이스 스타터.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot java"></span>Java</span>
+              <span>★ 1</span>
+              <span>Template</span>
+            </div>
+          </article>
+
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">matlab-robotics-demo</a>
+            <p class="desc">2-link 로봇 Forward Kinematics 시각화.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot matlab"></span>MATLAB</span>
+              <span>★ 1</span>
+              <span>Demo</span>
+            </div>
+          </article>
+
+          <article class="repo card">
+            <a class="repo-name" href="#" target="_blank">study-notes</a>
+            <p class="desc">Data Structure / Hashing / Graph 요약.</p>
+            <div class="repo-meta">
+              <span class="lang"><span class="dot md"></span>Docs</span>
+              <span>★ 0</span>
+              <span>Notes</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contributions (fake grid you can edit numbers/colors) -->
+      <section class="activity">
+        <div class="section-head">
+          <h2>Contributions in the last year</h2>
+          <div class="legend">
+            <span>Less</span>
+            <span class="sq lvl1"></span>
+            <span class="sq lvl2"></span>
+            <span class="sq lvl3"></span>
+            <span class="sq lvl4"></span>
+            <span>More</span>
+          </div>
+        </div>
+        <div class="heatmap">
+          <!-- 52 weeks × 7 days = 364 cells; here is a small sample row -->
+          <!-- 복붙해서 칸 수 늘려도 됨 -->
+          <!-- week -->
+          <div class="col">
+            <span class="cell lvl0"></span>
+            <span class="cell lvl1"></span>
+            <span class="cell lvl0"></span>
+            <span class="cell lvl2"></span>
+            <span class="cell lvl0"></span>
+            <span class="cell lvl3"></span>
+            <span class="cell lvl0"></span>
+          </div>
+          <div class="col">
+            <span class="cell lvl1"></span>
+            <span class="cell lvl2"></span>
+            <span class="cell lvl0"></span>
+            <span class="cell lvl0"></span>
+            <span class="cell lvl4"></span>
+            <span class="cell lvl1"></span>
+            <span class="cell lvl0"></span>
+          </div>
+          <!-- 필요하면 더 추가 -->
+        </div>
+        <p class="muted">Learn how we count contributions</p>
+      </section>
     </section>
   </main>
 
-  <footer class="footer">
-    <small>© 2025 Hyojin Jin</small>
+  <footer id="contact" class="footer">
+    <div class="container">
+      <small>© 2025 Hyojin Jin</small>
+      <div class="links">
+        <a href="mailto:your@mail.com">Email</a>
+        <a href="https://github.com/Hyojin-Jin-Lee05" target="_blank">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
