@@ -4,12 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hyojin Jin – Portfolio</title>
+  <meta name="description" content="Image Processing & Web Dev Portfolio of Hyojin Jin">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Hyojin Jin</h1>
-    <p>Software & AI · Image Processing · Frontend</p>
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <a class="brand" href="#">Hyojin Jin</a>
     <nav>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
@@ -17,45 +19,98 @@
     </nav>
   </header>
 
-  <main>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Software · Image Processing · Frontend</h1>
+    <p>FFT/DCT · NLM/PNLM · React · Spring Boot</p>
+    <a class="btn" href="#projects">See Projects</a>
+  </section>
+
+  <main class="container">
+    <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
-      <article>
-        <h3>PNLM Denoising (2024–)</h3>
-        <p>FFT/DCT 고주파 비율 기반 패치 사이즈 적응형 NLM 개선. PSNR 로그/결과 비교.</p>
-        <ul>
-          <li><a href="https://github.com/..." target="_blank">Code</a></li>
-          <li><a href="assets/pnlm-result.png" target="_blank">Result</a></li>
-        </ul>
-      </article>
-      <article>
-        <h3>Y-nnect Web</h3>
-        <p>React + TS + Tailwind. Auth, 프로필, 이미지 크롭.</p>
-        <ul>
-          <li><a href="https://github.com/..." target="_blank">Repo</a></li>
-          <li><a href="https://..." target="_blank">Live</a></li>
-        </ul>
-      </article>
+
+      <div class="projects">
+        <!-- Card 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>PNLM Denoising (2024–)</h3>
+            <span class="tag">C++ · OpenCV</span>
+          </div>
+          <p class="desc">
+            고주파 비율(FFT/DCT)로 패치/서치 크기를 적응시켜 NLM 성능 향상. PSNR/MSE 로그, 패치맵 시각화 포함.
+          </p>
+          <ul class="links">
+            <li><a href="https://github.com/..." target="_blank" rel="noopener">Code</a></li>
+            <li><a href="assets/pnlm-result.png" target="_blank" rel="noopener">Result</a></li>
+            <li><a href="projects/pnlm.html">Details</a></li>
+          </ul>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Y-nnect Web</h3>
+            <span class="tag">React · TS · Tailwind</span>
+          </div>
+          <p class="desc">
+            인증 흐름, 프로필 편집, 이미지 크롭/아바타, 로컬/IndexedDB 저장. 팀 협업을 위한 FSD 구조 적용.
+          </p>
+          <ul class="links">
+            <li><a href="https://github.com/..." target="_blank" rel="noopener">Repo</a></li>
+            <li><a href="https://..." target="_blank" rel="noopener">Live</a></li>
+          </ul>
+        </article>
+
+        <!-- Card 3 (예시) -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Down/Up-Scaling Study</h3>
+            <span class="tag">Python · OpenCV</span>
+          </div>
+          <p class="desc">
+            Bilinear/Bicubic/Lanczos/sinc 비교 실험. 커널별 특성 정리와 PSNR 비교 그래프 자동 생성.
+          </p>
+          <ul class="links">
+            <li><a href="https://github.com/..." target="_blank" rel="noopener">Notebook</a></li>
+            <li><a href="assets/psnr-chart.png" target="_blank" rel="noopener">Chart</a></li>
+          </ul>
+        </article>
+      </div>
     </section>
 
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
-      <p>연세대 미래캠 소프트웨어학부 4학년. 이미지 처리/로보틱스 연구.</p>
-      <ul>
-        <li>관심: NLM, 다운/업스케일링, Spring Boot, React</li>
-        <li>수상/활동: Someday 운영진, 해커톤 다수</li>
-      </ul>
+      <div class="about">
+        <img class="avatar" src="assets/headshot.jpg" alt="Hyojin Jin profile photo" />
+        <div>
+          <p>
+            연세대 미래캠 소프트웨어학부 4학년. 이미지 처리(특히 NLM/다운스케일링)와
+            웹 프론트엔드에 관심. 연구/동아리/해커톤 프로젝트를 통해 성과 중심 개발을 지향합니다.
+          </p>
+          <ul class="facts">
+            <li>관심 분야: NLM, Edge-aware Scaling, React/Tailwind, Spring Boot</li>
+            <li>핵심 역량: 실험 자동화, 로그/시각화, 협업 브랜치 전략</li>
+            <li><a href="Resume.pdf" target="_blank" rel="noopener">이력서(Resume.pdf)</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:your@mail.com">your@mail.com</a></p>
-      <p>GitHub: <a href="https://github.com/Hyojin-Jin-Lee05">Hyojin-Jin-Lee05</a></p>
-      <p>LinkedIn: <a href="#">링크</a></p>
+      <div class="contact">
+        <a href="mailto:your@mail.com">your@mail.com</a>
+        <a href="https://github.com/Hyojin-Jin-Lee05" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <small>© 2025 Hyojin Jin</small>
   </footer>
 </body>
